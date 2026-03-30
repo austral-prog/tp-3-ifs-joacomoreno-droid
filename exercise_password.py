@@ -24,3 +24,15 @@ def password():
         Debe contener un numero
     """
     pass
+
+    contrasena = input()
+    valida = True
+
+    if len(contrasena) < 8:
+        print("Contraseña muy corta")
+        valida = False
+    if not any (char.isdigit() for char in contrasena):
+        print("Debe contener un numero")
+        valida = False
+    if valida:
+        print("Contraseña valida")
